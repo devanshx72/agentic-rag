@@ -6,7 +6,7 @@ import base64
 import shutil
 from pathlib import Path
 from dotenv import load_dotenv
-from mistralai import Mistral
+from mistralai.client import Mistral
 
 load_dotenv()
 
