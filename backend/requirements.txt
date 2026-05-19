@@ -2,8 +2,8 @@ fastapi
 uvicorn
 python-dotenv
 langchain
-langchain-mistralai
+langchain-mistralai>=0.2.0
 langgraph
-mistralai
+mistralai>=1.0.0
 python-multipart
 pydantic
