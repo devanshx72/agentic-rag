@@ -7,6 +7,7 @@ import shutil
 from pathlib import Path
 from dotenv import load_dotenv
 from mistralai.client import Mistral
+import pprint
 
 load_dotenv()
 
@@ -24,7 +25,7 @@ def index_pdf(file_path: str) -> str:
     Full indexing pipeline:
       1. Mistral OCR  -> per-page markdown
       2. Tree builder -> hierarchical section index
-      3. Persist      -> workspace/documents/{doc_id}/
+      3. Persist      -> workspace/{doc_id}/
 
     Returns the doc_id used for all subsequent lookups.
     """
@@ -103,7 +104,7 @@ def cleanup_document(doc_id: str) -> bool:
 
 
 def _doc_dir(doc_id: str) -> Path:
-    return WORKSPACE_DIR / "documents" / doc_id
+    return WORKSPACE_DIR / doc_id
 
 
 def _run_ocr(file_path: str) -> list[str]:
