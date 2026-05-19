@@ -328,8 +328,11 @@ export default function App() {
       <aside className="sidebar">
         <div className="sidebar-header">
           <div className="logo-block">
-            <span className="logo-name">PageMind</span>
-            <span className="logo-sub">Agentic RAG</span>
+            <img src="/favicon.ico" alt="PageMind Logo" className="logo-img" />
+            <div className="logo-text">
+              <span className="logo-name">PageMind</span>
+              <span className="logo-sub">Agentic RAG</span>
+            </div>
           </div>
         </div>
 
